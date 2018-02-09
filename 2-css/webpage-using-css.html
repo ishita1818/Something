@@ -8,12 +8,17 @@
 			.large{
 				font-size:250%;
 				color:cyan;
-				float:right;
+				
 			}
 			.ishita{
 				color:orange;
 				background-color:blue;
 				width:300px;
+				position:relative;
+				top:20px;
+				bottom:20px;
+				z-index:2;
+				opacity:0.25;
 			}
 			
 			#more{
@@ -29,18 +34,33 @@
 				color: #7B241C;
 				background-color: #F39C12;
 				width:300px;
-				float:left;
+				height:2000px;
+				position:relative;
+				left:50px;
+				top:15px;
+				z-index:1;
 			}
+			.-_-{
 			
-			.lets-clear{
-			
-				clear: both;
+				color:pink;
+				position:absolute;
+				left:300px;
+				top:300px;
+				background-color:purple;
+			}
+			.ishb{
+			    position:fixed;
+				background-color:red;
+				color:white;
+				width:600px;
+				z-index:3;
 			}
 			
 		</style>
 	</head>
 
 	<body>
+		<h3 class="-_-">Header... what else -_-</h3>
 		<h1 class="ishita large">Webpage using css</h1>
 		<hr>
 		<div id="some-section">
@@ -50,5 +70,6 @@
 		<div class="lets-clear">
 		<p>Just to see what happens after adding something below floating things..??!!</p>
 		</div>
+		<p class="ishb">fixed things... :) :)</p>
 	</body>
 </html>

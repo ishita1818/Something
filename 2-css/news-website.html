@@ -1,6 +1,6 @@
 <html>
 	<head>
-	<title>Technology - BBC News</title>
+	<title>BBC - Homepage</title>
 	
 	<style type="text/css">
 		
@@ -57,7 +57,50 @@
 		}
 		
 		#down-arrow-img{
-			margin: 5px 15px 1px 40px;
+			margin: 5px 5px 1px 40px;
+			float:left;
+		}
+		
+		#search-bar {
+		
+			margin: 8px 0px 8px 15px;
+			border:none;
+			font-weight: bold;
+			padding: 5px 0px 5px 5px;
+			color:#333333;
+			float:left;
+		}
+		
+		#search-img {
+			float: left;
+			margin-top:8px;
+			height:25px;
+		}
+		
+		#first-section {
+		
+			background-color: #E7E8E1;
+			padding : 35px 50px;
+		
+		}
+		
+		.welcome-text {
+		
+			color:#505050;
+			font-size: 20px;
+			
+		}
+		
+		.left {
+			float : left;
+		}
+		
+		.right {
+			float : right;
+		}
+		
+		.clear {
+			clear :both;
 		}
 		
 	</style>
@@ -96,7 +139,22 @@
 			<span class="top-texts">More</span>
 			<img src="images/down-arrow.png" id="down-arrow-img">
 			</div>
-			<div class="topbar-section"></div>
+			<div class="topbar-section">
+				
+				<input type="text" id="search-bar" placeholder="Search">
+				<input type="image" src="images/search_icon.png" id ="search-img">
+			</div>
+		</div>
+		
+		<div class="clear" ></div>
+		
+		<div id="first-section">
+			<div class="welcome-text left" >
+				Welcome to BBC.com
+			</div>
+			<div class="welcome-text right" >
+				Saturday, 10 February
+			</div>
 		</div>
 	
 	</body>

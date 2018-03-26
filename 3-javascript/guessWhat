@@ -9,6 +9,11 @@
     <input type="number" id="input">
     <button id="enter">Guess</button>
 
+    <hr>
+    <h4>Now I will guess what are you thinking of.. ;)</h4>
+    <input type="number" id="input2">
+    <button id="enter2">Start Guessing</button>
+
     <script type="text/javascript">
       document.getElementById("enter").onclick = function(){
 
@@ -22,6 +27,17 @@
         else{
           alert("OOPSsss... not that though!(I guessed "+num +") Better Luck next time *_*");
         }
+      }
+      var inpu2= document.getElementById("enter2").onclick = function(){
+
+        var inpu= document.getElementById("input2").value;
+        var num= (Math.floor((Math.random()*10))/2).toFixed(0);
+        var x=1;
+        while(inpu!=num){
+          num= (Math.floor((Math.random()*10))/2).toFixed(0);
+          x++;
+        }
+        alert("So, it took me "+x+" guesses to guess your number");
       }
     </script>
 

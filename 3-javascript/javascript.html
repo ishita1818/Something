@@ -1,16 +1,42 @@
 <html>
 
   <head>
-    <title>hey</title>
+    <title>Mah Webpage</title>
   </head>
 
   <body>
-    <button onclick="alert('You silly lilly!')" id="mahButton">Click Me</button>
     <p id="text"> MXJNWDINIQXXXNNnwekfcqinnqixn  jnicnw keqncnon wqndonewocnownc nc;qwn;on;vconwq wnfc;w</p>
+    <button id="mahButton">Change text</button>
+    <p id="sectext">Javascript is ....</p>
+    <button id="secondButton">Append text</button>
+    <p id="empty"></p>
+    <button id="createButton">Create text</button>
+    <p id="moretext">Here is some text to style.</p>
+    <button id="styleButton">Style text</button>
+    <button id="disappearButton">make the text disappear</button>
     <script type="text/javascript">
-        alert("Page is loaded!");
-        document.getElementById("mahButton").innerHTML="HEllo..wanna cick me !";
-        document.getElementById("text").innerHTML="la la la la ";
+
+        document.getElementById("mahButton").onclick = function(){
+          alert("I am clicked!");
+          document.getElementById("text").innerHTML="Text has been changed.. :)";
+        };
+        document.getElementById("secondButton").onclick = function(){
+          document.getElementById("sectext").innerHTML="I think "+document.getElementById("sectext").innerHTML+" Awesome!";
+        };
+
+        document.getElementById("createButton").onclick = function(){
+
+          document.getElementById("empty").innerHTML="<i>text<i/> added to empty paragraph!<br> <b>Wohhah</b>";
+
+        };
+
+        document.getElementById("styleButton").onclick= function(){
+          document.getElementById("moretext").style.color="violet";
+          document.getElementById("moretext").style.fontSize="50px";
+        };
+        document.getElementById("disappearButton").onclick= function(){
+          document.getElementById("moretext").style.display="none";
+        };
     </script>
   </body>
 </html>

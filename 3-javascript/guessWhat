@@ -6,7 +6,14 @@
 
   <body>
     <h4>Guess which number I am thinking of between 0 to 5 : :)</h4>
-    <input type="number" id="input">
+    <select id="input">
+        <option>0</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select>
     <button id="enter">Guess</button>
 
     <hr>
@@ -31,14 +38,19 @@
       var inpu2= document.getElementById("enter2").onclick = function(){
 
         var inpu= document.getElementById("input2").value;
-        var num= (Math.floor((Math.random()*10))/2).toFixed(0);
-        var x=1;
-        while(inpu!=num){
-          num= (Math.floor((Math.random()*10))/2).toFixed(0);
-          x++;
+        if(inpu>5 || inpu<0){
+          alert("Don't try to cheat... I am watching you.. -_-");
         }
-        alert("So, it took me "+x+" guesses to guess your number");
-      }
+        else{
+          var num= (Math.floor((Math.random()*10))/2).toFixed(0);
+          var x=1;
+          while(inpu!=num){
+            num= (Math.floor((Math.random()*10))/2).toFixed(0);
+            x++;
+          }
+          alert("So, it took me "+x+" guesses to guess your number");
+       }
+    }
     </script>
 
   </body>

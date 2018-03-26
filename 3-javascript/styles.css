@@ -1,0 +1,82 @@
+.middle {
+  text-align: center;
+  margin:auto;
+  display:block;
+}
+
+.circle {
+
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+    margin:50px;
+    float: left;
+    display:none;
+    position: relative;
+}
+
+.square{
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    display:none;
+    position: relative;
+}
+
+.rectangle{
+  width: 200px;
+  height: 100px;
+  margin: 20px;
+  display:none;
+  position: relative;
+}
+.triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid red;
+  position: relative;
+}
+
+.triangle-down {
+  width: 0;
+  height: 0;
+  border-left: 50px solid white;
+  border-right: 50px solid white;
+  border-top: 100px solid yellow;
+  position: relative;
+}
+
+.parallelogram {
+  width: 100px;
+  height: 50px;
+  transform: skew(20deg);
+  position: relative;
+}
+
+.triangle-left {
+  width: 0;
+  height: 0;
+  border-top: 50px solid white;
+  border-right: 100px solid green;
+  border-bottom: 50px solid white;
+  position: relative;
+}
+
+.triangle-right {
+  width: 0;
+  height: 0;
+  border-top: 50px solid white;
+  border-left: 100px solid blue;
+  border-bottom: 50px solid white;
+  position: relative;
+}
+.trapezoid {
+  border-bottom: 100px solid cyan;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  height: 0;
+  width: 150px;
+  position: relative;
+}

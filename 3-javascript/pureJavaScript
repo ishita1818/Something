@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>JavaScript</title>
+  </head>
+
+  <body>
+    <input type="text" id="input">
+    <button id="changeButon">Change Text</button>
+    <p id="text">Here is some random text to display</p>
+    <script type="text/javascript">
+    /**
+        var x=18;
+        alert(x);
+    **/
+    document.getElementById("changeButon").onclick= function(){
+
+      var text= document.getElementById("input").value;
+      document.getElementById("text").innerHTML= text;
+    }
+
+    var mahArray =[];
+    mahArray[0]="mah";
+    mahArray[1]="array";
+    alert(mahArray);
+    </script>
+  </body>
+
+</html>

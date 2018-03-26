@@ -1,0 +1,30 @@
+<html>
+
+  <head>
+    <title>Gaming</title>
+  </head>
+
+  <body>
+    <h4>Guess which number I am thinking of between 0 to 5 : :)</h4>
+    <input type="number" id="input">
+    <button id="enter">Guess</button>
+
+    <script type="text/javascript">
+      document.getElementById("enter").onclick = function(){
+
+        var inp= document.getElementById("input").value;
+        var num= (Math.floor((Math.random()*10))/2).toFixed(0);
+        console.log(inp);
+        console.log(num);
+        if(inp===num){
+          alert("Whohhaa... You got me there ;)");
+        }
+        else{
+          alert("OOPSsss... not that though!(I guessed "+num +") Better Luck next time *_*");
+        }
+      }
+    </script>
+
+  </body>
+
+</html>

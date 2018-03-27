@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <title>Animations</title>
+    <script src="jquery.min.js" type="text/javascript"></script>
+    <style type="text/css">
+    #circle{
+
+      height:200px;
+      width:200px;
+      border-radius: 50%;
+      background-color: cyan;
+      margin-left: 20px;
+    }
+
+    </style>
+  </head>
+
+  <body>
+      <div id="circle"></div>
+
+      <script type="text/javascript">
+
+        var isCircle=true;
+        $("#circle").click(function(){
+
+          if(isCircle){
+            $(this).animate(
+              {width:"400px",
+              height:"400px",
+              backgroundColor:"green",
+              marginTop:"100px",
+              marginLeft:"100px"
+              },
+              2000,
+            function(){
+              isCircle=false;
+              $(this).css("backgroundColor","red");
+            });
+          }
+          else{
+            $(this).animate(
+              {width:"200px",
+               height:"200px",
+               marginTop:"10px",
+               marginLeft:"10px"
+              },
+               2000,
+             function(){
+                isCircle=true;
+                $(this).css("backgroundColor","green");         
+             });
+
+          }
+        });
+
+      </script>
+  </body>
+
+</html>

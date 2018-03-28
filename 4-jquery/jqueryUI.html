@@ -23,22 +23,87 @@
 
           }
 
+          #droppable{
+            height:300px;
+            width: 300px;
+            float: right;
+            background-color: black;
+          }
+          #accordion {
+            width:300px;
+          }
+          #sortable li {
+            width: 50px;
+            height: 20px;
+            margin: 5px;
+            background-color: cyan;
+            padding: 5px;
+          }
+          #sortable {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 60%;
+          }
+
       </style>
     </head>
 
     <body>
 
-      <div class="ui-widget-content" id="draggable">
+      <div id="draggable">
         <div id="inside">Drag me inside
         </div>
       </div>
       <div id="resizable">
+      </div>
+      <div id="droppable">
+      </div>
+      <div id="accordion">
+
+        <p>Section 1</p>
+        <div>
+          <p>here is section 1</p>
+        </div>
+
+        <h3>Section 2</h3>
+          <div>
+            <p>here is section 2</p>
+          </div>
+
+        <h4>Section 3</h4>
+          <div>
+            <p>here is section 3</p>
+          </div>
+
+        <h4>Section 4</h4>
+          <div>
+            <p>here is section 4</p>
+          </div>
+      </div>
+      <div id="sortable">
+        <li >Item 1</li>
+        <li >Item 2</li>
+        <li >Item 3</li>
+        <li >Item 4</li>
+        <li >Item 5</li>
+        <li >Item 6</li>
+        <li >Item 7</li>
       </div>
       <script type="text/javascript">
 
         $("#draggable").draggable().resizable();
         $("#inside").draggable({containment: "#draggable", scroll: false});
         $("#resizable").resizable();
+        $("#droppable").droppable(
+          {drop: function(event,ui){
+            alert("dropped!");
+          }
+        }
+        );
+        $("#accordion").accordion();
+        $("#sortable").sortable();
+        $("#sortable").disableSelection();
       </script>
     </body>
 </html>

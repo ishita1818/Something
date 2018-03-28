@@ -18,6 +18,7 @@
   <body>
       <div id="circle"></div>
 
+      <p id="text"></p>
       <script type="text/javascript">
 
         var isCircle=true;
@@ -47,10 +48,21 @@
                2000,
              function(){
                 isCircle=true;
-                $(this).css("backgroundColor","green");         
+                $(this).css("backgroundColor","blue");
              });
 
           }
+        });
+        /**
+        $.get("some.txt",function(data){
+
+          alert(data);
+        });
+        **/
+        $.ajax("some.txt").done(function(data){
+          $("#text").text(data);
+        }).fail(function(){
+          alert("Could not get data!");
         });
 
       </script>

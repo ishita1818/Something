@@ -1,0 +1,44 @@
+<html>
+    <head>
+      <title>jQuery UI</title>
+      <script src="jquery.min.js" type="text/javascript"></script>
+      <script src="jquery-ui/jquery-ui.js"></script>
+      <link href="jquery-ui/jquery-ui.css" rel="stylesheet">
+      <style>
+          #draggable {
+            height: 200px;
+            width: 200px;
+            background-color: violet;
+          }
+          #inside {
+            height:20px;
+            width: 120px;
+            background-color: cyan;
+          }
+          #resizable {
+            height:100px;
+            width:100px;
+            background-color: green;
+            border-radius: 50%
+
+          }
+
+      </style>
+    </head>
+
+    <body>
+
+      <div class="ui-widget-content" id="draggable">
+        <div id="inside">Drag me inside
+        </div>
+      </div>
+      <div id="resizable">
+      </div>
+      <script type="text/javascript">
+
+        $("#draggable").draggable().resizable();
+        $("#inside").draggable({containment: "#draggable", scroll: false});
+        $("#resizable").resizable();
+      </script>
+    </body>
+</html>

@@ -63,14 +63,27 @@
           }
 
           textarea {
-
-            width: 50%;
             resize: none;
+            border: 1px solid grey;;
 
+          }
+
+          .panel {
+            width:50%;
+            float:left;
           }
 
           #bodyContainer{
             clear: both;
+          }
+
+          iframe {
+            border: 1px solid grey;
+          }
+
+          .hidden {
+
+            display : none;
           }
 
         </style>
@@ -100,11 +113,35 @@
 
       <div id="bodyContainer">
 
-        <textarea id="htmlTextarea">Hello</textarea>
+        <textarea id="htmlPanel" class="panel"><p>Hello</p></textarea>
+
+        <textarea id="cssPanel" class="panel hidden">p {
+          color: cyan;
+        }</textarea>
+
+        <textarea id="javascriptPanel" class="panel hidden">alert("Hi javascript!");</textarea>
+
+        <iframe id="outputPanel" class="panel"></iframe>
 
       </div>
 
       <script type="text/javascript">
+
+        function updateOutput(){
+          $("iframe").contents().find("html").html(
+            "<html><head><style type='text/css'>"+
+            $("#cssPanel").val()
+             +"</style></head><body>"+
+            $("#htmlPanel").val()+
+            "</body></html>"
+          );
+          /** for evaluating in the main main page:
+          eval($("#javascriptPanel").val());
+          **/
+          // for evaluating inside iframe
+          document.getElementById("outputPanel").contentWindow.eval($("#javascriptPanel").val());
+
+        }
 
         $(".toggleButton").hover(function(){
 
@@ -119,10 +156,24 @@
 
          $(this).toggleClass("active");
          $(this).removeClass("highlightedButton");
+
+         var panelID = $(this).attr("id")+"Panel";
+
+         $("#"+panelID).toggleClass("hidden");
+         var activePanels = 4-$('.hidden').length;
+         $(".panel").width($(window).width()/activePanels -6);
        });
 
-       $("textarea").height($(window).height()- 53- $(".toggleButton").height()- $("#header").height());
+       $(".panel").height($(window).height()- 52- $(".toggleButton").height()- $("#header").height());
 
+       $(".panel").width($(window).width()/2 -6);
+
+       updateOutput();
+
+       $("textarea").on('change keyup paste', function(){
+
+         updateOutput();
+       });
       </script>
 
     </body>

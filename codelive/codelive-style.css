@@ -1,0 +1,96 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #C9FFBF;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #FFAFBD, #C9FFBF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #FFAFBD, #C9FFBF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+#emptyText {
+
+  font-family: 'Work Sans', sans-serif;
+  text-align: center;
+}
+
+#header{
+  height:30px;
+  padding: 10px;
+
+}
+
+#name {
+  width:180px;
+  margin: 0 auto;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 25px;
+  font-weight: bold;
+  color:black;
+
+}
+
+#topbar {
+  width:260px;
+  margin: 0 auto;
+}
+
+.toggleButton {
+  float: left;
+  padding: 5px;
+  border: 1px solid black;
+  margin:5px 0;
+  border-right: none;
+  font-family: 'Work Sans', sans-serif;
+  color:black;
+}
+
+#html{
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
+#output {
+  border-right: 1px solid black;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+
+}
+
+.active {
+  background-color:#595b57 ;
+  color:white;
+}
+
+.highlightedButton {
+  background-color: black;
+  color: white;
+}
+
+textarea {
+  resize: none;
+  border: 1px solid black;
+  background: transparent;
+}
+
+.panel {
+  width:50%;
+  float:left;
+}
+
+#bodyContainer{
+  clear: both;
+}
+
+iframe {
+  border: 1px solid black;
+}
+
+.hidden {
+
+  display : none;
+}
+.ehidden {
+  display: none;
+}

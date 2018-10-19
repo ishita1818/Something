@@ -1,7 +1,63 @@
 body {
-  padding-top: 50px;
+  padding-top: 85px;
 }
 .starter-template {
   padding: 40px 15px;
   text-align: center;
+}
+
+.navbar{
+	font-family:"Raleway", sans-serif;
+	background:#fff;
+	min-height:85px;
+	text-transform:uppercase;
+	border-bottom:#ccc solid 1px;
+	padding-top:15px;
+	text-align:center;
+}
+
+.navbar-brand{
+	padding:0;
+}
+
+.navbar span{
+	font-size:10px;
+	color:#ccc;
+	text-align:center;
+}
+
+.navbar-nav > li{
+	padding-bottom:5px;
+}
+
+.navbar-nav > li > a{
+	padding-bottom:0;
+	color:#666;
+}
+
+.nav > li > a:hover, .nav > li > a:focus{
+	background:none;
+}
+
+.navbar li:hover{
+	background:#f4f4f4;
+	cursor:pointer;
+}
+
+.navbar li li{
+	padding:5px 0;
+	border-left:4px solid #f4f4f4;
+}
+
+.navbar li li:hover{
+	border-left:4px solid #406c96;
+}
+
+.navbar li.active{
+	background:#406c96;
+	color:#fff;
+}
+
+.navbar li.active a{
+	color:#fff;
 }

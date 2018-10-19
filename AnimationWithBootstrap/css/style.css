@@ -122,3 +122,63 @@ section h1{
 	font-size:1.5em;
 }
 
+.fa-white{
+	color:#fff;
+}
+
+.fa-lg{
+	font-size:4em;
+}
+
+.content-icons{
+	text-align:center;
+}
+
+.content-icons h4{
+	color:#fff;
+}
+
+.content-icons i{
+	display:block;
+	margin-bottom:15px;
+}
+
+.content-devices{
+	text-align:center;
+}
+
+.content-devices img{
+	position:relative;
+}
+
+.content-devices img#desktop{
+	width:375px;
+}
+
+.content-devices img#laptop{
+	margin-left:-95px;
+	z-index:100;
+	width:290px;
+}
+
+.content-devices img#mobile{
+	z-index:100;
+	width:190px;
+}
+
+#footer-main{
+	background:#406c96;
+	color:#fff;
+	border-top:#333 8px solid;
+	padding:40px 0;
+}
+
+#footer-main h4,#footer-main a{
+	color:#fff;
+}
+
+#footer-main li{
+	list-style:square;
+	line-height:2em;
+}
+

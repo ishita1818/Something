@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Fri Oct 19 23:11:23 2018
+Created on Sat Oct 20 14:56:51 2018
 
 @author: nishita
 """
 
-#to calculate the trace of a square matrix
 try:
     print("calculation of trace of a square matrix")
     n=int(input("enter the order of matrix : "))
